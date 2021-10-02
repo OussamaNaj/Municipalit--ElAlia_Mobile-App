@@ -19,6 +19,7 @@
     "react-native-chatbot": "*",
     "react-native-chatbot-expo": "github:jzarca01/react-native-chatbot-expo",
     "react-native-simple-chatbot": "^1.1.0",
+    "react-native-vector-icons": "^8.1.0",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {

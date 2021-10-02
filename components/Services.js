@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, Modal, StyleSheet, Text, TouchableHighlight, View,Button } from 'react-native';
+import { Alert, Modal, StyleSheet, Text, TouchableHighlight, View,Button,ImageBackground, TextInput,Image } from 'react-native';
 import Chatbot from './Chatbot';
 import Formulaire1 from './Formulaire1'
 import Formulaire2 from './Formulaire2'
@@ -11,8 +11,11 @@ export default function Services({ navigation }) {
   const [modalVisible3, setModalVisible3] = useState(false);
   const [modalVisible4, setModalVisible4] = useState(false);
 
+  const image = require('../assets/background.png')
+  const imagee = require('../assets/formulaire.png')
 
   return (
+    <ImageBackground source={image} resizeMode="cover" style={{flex: 1,justifyContent: "center" }}>
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <TouchableHighlight
           style={styles.openButton}
@@ -29,7 +32,6 @@ export default function Services({ navigation }) {
           }}>
           <Text style={styles.textStyle}>بش تقدم شكوى</Text>
         </TouchableHighlight>
-        
         <TouchableHighlight
           style={styles.openButton}
           onPress={() => {
@@ -60,6 +62,7 @@ export default function Services({ navigation }) {
                 }}>
           <Text style={styles.textStyle}>شخص معنوي</Text>
         </TouchableHighlight>
+        <Image source={imagee}/>
             </View>
           </View>
         </Modal>
@@ -96,8 +99,8 @@ export default function Services({ navigation }) {
             </View>
           </View>
         </Modal>
-
-    </View>
+        </View>
+    </ImageBackground>
   );
 }
 
@@ -111,7 +114,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 70,
     margin:0,
     flex: 1,
     bottom:0,
@@ -121,7 +124,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     height:630,
     borderRadius: 20,
-    padding: 70,
+    padding: 80,
     alignItems: 'center',
     shadowColor: 'white',
     shadowOffset: {
@@ -134,7 +137,7 @@ const styles = StyleSheet.create({
   },
   modalView2: {
     margin:30,
-    backgroundColor: '#FFFF',
+    backgroundColor: 'white',
     borderRadius: 20,
     padding: 70,
     alignItems: 'center',
@@ -148,17 +151,25 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   openButton: {
-    backgroundColor: '#448830',
+    backgroundColor: 'white',
+    borderColor: '#448830',
+    borderWidth: 2,
     borderRadius: 20,
-    padding: 45,
-    margin:35  },
+    padding: 35,
+    margin:15,
+  width:340, 
+  height:135 },
   openButton2: {
-      backgroundColor: '#448830',
+    backgroundColor: 'white',
+    borderColor: '#448830',
+    borderWidth: 2,
       borderRadius: 20,
-      padding: 20,
-      margin:15  },
+      padding: 10,
+      margin:15 ,
+    width:150,
+  height:100 },
   textStyle: {
-    color: 'white',
+    color: '#448830',
     fontWeight: 'bold',
     textAlign: 'center',
     fontSize: 30

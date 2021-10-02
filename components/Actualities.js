@@ -6,7 +6,7 @@ import {
 	Image,
 	ScrollView,
 	Pressable,
-	Linking,SafeAreaView,StatusBar,
+	Linking,SafeAreaView,StatusBar,ImageBackground
 } from 'react-native';
 
 
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontWeight: 'bold',
 		fontSize: 50,
-		color:'#448830'
+		color:'black'
 	},
 	header: {
 		flexDirection: 'row',
@@ -71,13 +71,14 @@ const articles=[
 
 
 ]
+const image = require('../assets/background.png')
 
 const Actualities = () => {
 	return (
-		<>
 			<SafeAreaView style={styles.container}>
 				<StatusBar barStyle='dark-content' />
         <ScrollView style={styles.newsList}>
+		<ImageBackground source={image} resizeMode="cover" style={{flex: 1,justifyContent: "center"  }}> 
 			<View style={styles.header}>
 				<Text style={styles.headerText}>الاخبار</Text>
 			</View>
@@ -96,9 +97,9 @@ const Actualities = () => {
 						</Text>
 					</Pressable>
 				))}
+		</ImageBackground>
 		</ScrollView>
-			</SafeAreaView>
-		</>
+	</SafeAreaView>
 	);
 };
 
