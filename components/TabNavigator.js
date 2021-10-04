@@ -38,10 +38,10 @@ export default function MyTabs() {
       tabBarInactiveTintColor: 'gray',
     })}
     >
-      <Tab.Screen name="Acceuil" options={{headerShown: false}} component={Acceuil}/>
-      <Tab.Screen name="Actualities" options={{headerShown: false}} component={Actualities} />
-      <Tab.Screen name="Services" options={{headerShown: false}} component={Services} />
-      <Tab.Screen name="Notifications" options={{headerShown: false,tabBarBadge: 3}} component={Notifications}/>
+      <Tab.Screen name="Acceuil" options={{headerShown: false,title:"الصفحة الرئيسية"}} component={Acceuil}/>
+      <Tab.Screen name="Actualities" options={{headerShown: false,title:"الاخبار"}} component={Actualities} />
+      <Tab.Screen name="Services" options={{headerShown: false,title:"الخدمات"}} component={Services} />
+      <Tab.Screen name="Notifications" options={{headerShown: false,tabBarBadge: 0,title:"الإشعارات"}} component={Notifications}/>
     </Tab.Navigator>
   );
 }

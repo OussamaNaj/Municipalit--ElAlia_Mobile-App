@@ -6,8 +6,10 @@ export default function Notifications({ navigation }) {
   return (
     <ImageBackground source={image} resizeMode="cover" style={{flex: 1,justifyContent: "center"  }}>
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Notifications</Text>
+      <Text style={{		fontWeight: 'bold',fontSize: 15}}> لا يوجد اشعارات !</Text>
     </View>
     </ImageBackground>
   );
 }
+
+ 

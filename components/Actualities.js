@@ -16,13 +16,16 @@ const styles = StyleSheet.create({
 	},
 	headerText: {
 		flex: 1,
+		paddingLeft:0,
+		bottom:10,
 		fontWeight: 'bold',
-		fontSize: 50,
-		color:'black'
+		fontSize: 40,
+		color:'white'
 	},
 	header: {
 		flexDirection: 'row',
-		paddingHorizontal: 20,
+		paddingHorizontal: 10,
+		paddingVertical: 20,
 	},
 	title: {
 		marginVertical: 15,
@@ -39,10 +42,12 @@ const styles = StyleSheet.create({
 	newsItem: {
 		marginVertical: 10,
 		marginHorizontal: 15,
-		paddingHorizontal: 20,
-		paddingVertical: 20,
+		paddingHorizontal: 15,
+		paddingVertical: 10,
 		backgroundColor: 'white',
-		borderRadius: 3,
+		borderRadius: 8,
+		borderColor: '#FFB085',
+		borderWidth: 2,
 	},
 
 });
@@ -81,7 +86,7 @@ const Actualities = () => {
 		<ImageBackground source={image} resizeMode="cover" style={{flex: 1,justifyContent: "center"  }}> 
 			<View style={styles.header}>
 				<Text style={styles.headerText}>الاخبار</Text>
-			</View>
+			</View >
 				{articles.map((article) => (
 					<Pressable
 						key={article.index}

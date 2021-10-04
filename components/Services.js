@@ -11,6 +11,7 @@ export default function Services({ navigation }) {
   const [modalVisible3, setModalVisible3] = useState(false);
   const [modalVisible4, setModalVisible4] = useState(false);
 
+
   const image = require('../assets/background.png')
   const imagee = require('../assets/formulaire.png')
 
@@ -61,6 +62,12 @@ export default function Services({ navigation }) {
                 setModalVisible(!modalVisible);
                 }}>
           <Text style={styles.textStyle}>شخص معنوي</Text>
+        </TouchableHighlight>
+        <TouchableHighlight
+              onPress={() => {
+                setModalVisible(!modalVisible);
+                }}>
+          <Text style={{color:'black',fontSize:20}}>رجوع</Text>
         </TouchableHighlight>
         <Image source={imagee}/>
             </View>
